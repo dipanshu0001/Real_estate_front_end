@@ -20,7 +20,7 @@ function Agenttemplate({ agent,isagent }) {
       <div className={isagent?"agent-main":"top-list-main"}>
         {
         !isagent
-        ?(<div id="top-list-bg-img-outer"><img src={agent.bck_img} className="top-list-bg-img"/></div>)
+        ?(<div className="top-list-bg-img-outer"><img src={agent.bck_img} className="top-list-bg-img"/></div>)
         :(<div className="bckimg">
           <a href="#">
             <img src={agent.bck_img} />

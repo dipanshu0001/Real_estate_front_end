@@ -10,12 +10,12 @@ import Heading from '../common_components/Heading';
 const settingses = 
 {
   dots: false,
-  infinite: true,
+  // infinite: true,
   speed: 1000,
   arrows:false,
-  autoplay:true,
-  mobilefirst:true,
-  autoplaySpeed:4500,
+  // autoplay:true,
+  // mobilefirst:true,
+  // autoplaySpeed:4500,
   cssEase: "linear",
   slidesToShow: 1,
   slidesToScroll: 1,
