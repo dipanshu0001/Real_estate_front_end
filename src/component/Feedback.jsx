@@ -8,7 +8,6 @@ function Feedback({ breif_des, description, name, img, post }) {
         <div className="feedback_content">
             {/* <div className="feedback_content_middle"> */}
                 <div className="feedback">
-
                     <p>{breif_des}</p>
                     <p>{description}</p>
                     <div className="small-triangle"></div>

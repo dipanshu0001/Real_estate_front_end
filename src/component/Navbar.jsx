@@ -35,11 +35,10 @@ function Navbar() {
       // upper_bar.classList.add("hidden");
     }
     else {
-      setSticky(false)
-      console.log(window.pageYOffset, isSticky)
       nav_bar.classList.remove("sticky")
       upper_bar.classList.remove("hidden")
       navbar_main.classList.remove("width")
+      setSticky(false)
       // upper_bar.classList.remove("hidden");
     }
   }

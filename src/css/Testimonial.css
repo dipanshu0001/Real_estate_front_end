@@ -1,10 +1,15 @@
 .Testi-main{
     width:80%;
     margin:10px auto;
+    position: relative;
+
+    /* background-color: red; */
 }
 .Testi-content{
-    width:calc(100%-20px);
     padding:20px;
+    /* width:calc(80%-40px); */
+    width:100%;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     margin:0px auto;
@@ -15,10 +20,8 @@
     flex:.3;
 } */
 @media only screen and (max-width:1000px){
-    /* .Testi-content>*{
-        flex:1;
-    } */
     .Testi-content{
         flex-direction: column;
+        width:80%;
     }
 }
