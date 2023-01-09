@@ -3,6 +3,7 @@
     z-index:5;
 width:calc(90%-20px);
 padding:0px 10px;
+margin:0px auto;
 box-sizing: border-box;
 
 /* margin:0px 10px; */
