@@ -1,7 +1,7 @@
 *{box-sizing: border-box;}
 .mobile_navbar{
     z-index:5;
-width:calc(90%-20px);
+width:calc(90%);
 padding:0px 10px;
 margin:0px auto;
 box-sizing: border-box;

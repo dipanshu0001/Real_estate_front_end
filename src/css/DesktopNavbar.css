@@ -172,8 +172,12 @@
     height:100%;
     border:0px;
     border-right: 1px solid gray;
-    transition: 500ms ease-in-out;
+    /* transition: 500ms ease-in-out; */
 
+}
+.r-social .active-star{
+    color:gold;
+    /* border: 2px solid orange; */
 }
 .r-social .calendar{
     flex:40%;

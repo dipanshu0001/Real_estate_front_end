@@ -30,7 +30,7 @@ function Mobilenavbar({ data }) {
                 <div className="mob-list-r">
                     <div className="mob-r-social">
                         <div><AiOutlineShareAlt size={20} className="share"/></div>
-                        {isfav === false ?(<div> <AiOutlineStar onClick={() => setfav(prev=>!prev)} size={20} className="star"/></div>) : (<div><AiFillStar size={30} className="star active-star"onClick={()=>setfav(prev=>!prev)} /></div>)}
+                        {isfav === false ?(<div onClick={() => setfav(prev=>!prev)}> <AiOutlineStar  size={20} className="star"/></div>) : (<div onClick={()=>setfav(prev=>!prev)} ><AiFillStar size={30} className="star active-star"/></div>)}
                        <div><BsCalendar3 size={20} values="get Scheduling" className="calender"/></div> 
 
                     </div>

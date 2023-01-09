@@ -1,3 +1,7 @@
+a{
+    margin:0px;
+    padding:0px;
+}
 .navbar-main{
     display:flex;
     flex-direction: column;
@@ -22,31 +26,46 @@
     background-color: black;
     color:white;
     /* flex-direction: column; */
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     /* background: none; */
     width:100%;
     height:40%;
     /* border:1px solid red; */
     margin-top: 0px;
     /* top:0px; */
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .social-links{
-    flex:.2;
+    /* flex:30%; */
+    width:30%;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin:auto 0px;
 }
-.social-links:hover
-{
-    border:2px solid black;
+.social-links .fb,.pintrest,.linkedin,.twitter{
+    color:white;
+}
+.social-links .pintrest:hover{
+    color:#c8232c;
+}
+.social-links .fb:hover{
+    color:#3b5998;
+}
+.social-links .linkedin:hover{
+    color: #0A66C2;
+}
+.social-links .twitter:hover{
+    color:#00acee ;
 }
 .login-signup
 {
     display: flex;
-    flex:.2;
-    justify-content: space-evenly;
+    /* flex:30%; */
+    width:30%;
+    justify-content: space-around;
     margin:auto 0px;
 }
 .bottom-navbar{
@@ -140,5 +159,19 @@
       /* flex-direction: column; */
       height: 500px;
     }
+    .upper-navbar{
+
+    }
     
+  }
+  @media only screen and (max-width:500px){
+    .upper-navbar{
+        justify-content: space-between;
+    }
+    .upper-navbar .social-links{
+        flex:.4 1 auto;
+    }
+    .login-signup{
+        flex:.4 1 auto;
+    }
   }

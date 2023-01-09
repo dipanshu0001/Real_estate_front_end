@@ -58,18 +58,17 @@ function Navbar() {
     <div className="navbar-main">
       <div className="upper-navbar">
         <div className="social-links">
-          <a href="https://www.facebook.com/login/" target="_blank"><FiFacebook style={{ color: "white" }} /></a>
-          <a href="https://in.pinterest.com/login/" target="_blank"><FaPinterestP style={{ color: "white" }} /></a>
-          <a href="https://www.linkedin.com/feed/" target="_blank"><FaLinkedinIn style={{ color: "white" }} /></a>
-          <a href="https://twitter.com/login?lang=en" target="_blank"><BsTwitter style={{ color: "white" }} /></a>
+          <a href="https://www.facebook.com/login/" target="_blank"><FiFacebook className="fb"   /></a>
+          <a href="https://in.pinterest.com/login/" target="_blank"><FaPinterestP  className="pintrest" /></a>
+          <a href="https://www.linkedin.com/feed/" target="_blank"><FaLinkedinIn  className="linkedin"/></a>
+          <a href="https://twitter.com/login?lang=en" target="_blank"><BsTwitter  className="twitter" /></a>
         </div>
         <div className="login-signup">
           <span>Login</span>
           <span>or</span>
           <span> Signup</span>
         </div>
-        <div>
-        </div>
+        
         
       </div>
       <div className="ul-css bottom-navbar">

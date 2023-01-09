@@ -56,7 +56,7 @@ function DesktopNavbar({data}) {
           <div className="r-social">
             
             <button className="share"><AiOutlineShareAlt size={30}/></button>
-            {isfav === false ? <button className="star" onClick={() =>setfav(prev=>!prev)}><AiOutlineStar  size={30}/></button> : <button className="star" onClick={() =>setfav(prev=>!prev)} ><AiFillStar size={30}/></button>}
+            {isfav === false ? <button className="star" onClick={() =>setfav(prev=>!prev)}><AiOutlineStar  size={30}/></button> : <button className="star active-star" onClick={() =>setfav(prev=>!prev)} ><AiFillStar size={40}/></button>}
             <button className="calendar"><BsCalendar3 size={30}/></button>
           </div>
           <div className="r-type">
