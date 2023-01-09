@@ -1,0 +1,139 @@
+/* .aside-scroll::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f015";
+        -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    font-weight: 900;
+    text-rendering: auto;
+    line-height: 28px;
+    margin-left: auto;
+    font-size: 10px;
+} */
+/* .aside-main{
+    background-color: white;
+    width:330px;
+    border:2px solid black;
+} */
+ul,p{
+    padding:0px;
+    margin:0px;
+}
+.aside-main{
+    position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999999;
+      width: 270px;
+      height: 100%;
+      background-color: white;
+      box-shadow: 0 2px 32px rgb(0 0 0 / 15%);
+      transition: .3s;
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(-270px);
+  }
+  .open{
+    transform: translateX(0px);
+  }
+a:link {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: black;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: blue;
+  }
+  
+  /* selected link */
+  a:active {
+    color: cyan;
+  }
+.aside-scroll{
+    overflow-y: auto;
+    position: relative;
+}
+.aside-scroll ul li{
+    list-style: none;
+    font-size: large;
+    font-weight: 500;
+    padding:20px 20px;
+}
+.icon{
+    padding:10px 15px;
+}
+.icon::before{
+    font-family: "Font Awesome 5 Free";
+    
+        -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    font-weight: 900;
+    text-rendering: auto;
+    line-height: 28px;
+    margin-left: auto;
+    /* font-family: Flaticon; */
+    font-size: 20px;
+}
+.home::before{
+    content: "\f015";
+}
+.blog::before{
+    content: "\f781";
+}
+.pages::before{
+    content: "\f5fd";
+}
+.listing::before{
+    content: "\f233";
+}
+.agent::before{
+    content: "\f025";
+}
+.agency::before{
+    content: "\f1ad";
+}
+.facebook::before{
+    font-family: FontAwesome;
+
+    content: "\f09a";
+}
+.pintrest::before{
+    font-family: FontAwesome;
+    content: "\f231";
+}
+.linkedin::before{
+    font-family: FontAwesome;
+
+    content: "\f0e1";
+}
+.twitter::before{
+    font-family: FontAwesome;
+
+    content: "\f099";
+}
+.cross::after{
+    font-family: FontAwesome;
+
+    content: "\f00d";
+}
+.menu-outer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
+.heading-mob{
+    font-weight: 600;
+    font-size: larger;
+}
+

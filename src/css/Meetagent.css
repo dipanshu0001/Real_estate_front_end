@@ -1,0 +1,13 @@
+.meet-agent-content{
+    width:90%;
+    margin:0px auto;
+}
+.meet-agent-main{
+    display:flex;
+    /* justify-content: space-evenly; */
+    width:80%;
+    flex-wrap: nowrap;
+    margin:0px auto;
+    /* overflow: hidden; */
+    flex-direction: column;
+}

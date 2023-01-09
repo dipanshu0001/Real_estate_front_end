@@ -1,0 +1,105 @@
+.toplisting-main{
+    /* background-color: yellowgreen; */
+    width:80%;
+    margin:0px auto;
+    position:relative;
+    /* background-color: red; */
+}
+.top-list-content
+{
+    position: absolute;
+    left:50px;
+    top:4%;
+    /* width:50%; */
+    max-height:100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding:20px;
+    border-radius:10px;
+}
+.top-list-bg-img{
+    width: 100%;
+    height:inherit;
+    border-radius: 10px;
+    /* position: absolute ; */
+}
+.top-list-bg-img-outer{
+    width: 100%;
+    position: absolute;
+    height:100%;
+
+}
+.sliders{
+    max-width: 80%;
+    /* background-color: yellowgreen; */
+    margin:0px auto;
+}
+/* .top-list-bg-img>*:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+    z-index: -1;
+    background-color: red;
+    transition: background-color .3s;
+} */
+
+.top-list-outer{
+    width:calc(100%-10px);
+    /* margin:20px; */
+    /* top:2%; */
+    margin:10px auto;
+    height:460px;
+    /* background-color: red;; */
+}
+.top-list-main{
+    position:relative;
+    width: calc(100%-10px);
+    margin:10px; 
+    /* overflow: hidden; */
+    /* padding: 20px; */
+    height:inherit;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius:10px;
+}
+.slides{
+    width:90%;
+}
+.top-list-content .button-footer{
+    /* position:absolute; */
+    margin:10px;
+    /* background-color:red; */
+}
+
+@media only screen and (min-width:500px) and (max-width:1200px){
+    .top-list-main{
+        /* background-color: red; */
+    }
+    .top-list-content
+    {
+        position: absolute;
+        max-width:90%;
+        max-height:90%;
+        left:0;
+        /* top:0px; */
+        right:0;
+        /* bottom:0px; */
+        margin:0px auto;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding:20px;
+        border-radius:10px;
+    }
+    .top-list-content{
+        font-size:small;
+        font-weight:500;
+    }
+    
+}
