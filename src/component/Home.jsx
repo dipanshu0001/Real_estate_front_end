@@ -14,25 +14,27 @@ import Categories from './Categories';
 import SignUp from './SignUp';
 import Login from './Login';
 import Testimonial from './Testimonial';
+import See_details from './See_details';
 
 
 
-export const sidebar_isclicked = createContext(null);
+// export const sidebar_isclicked = createContext(null);
 
 function Home() {
-  const [is_clicked, setClicked] = useState(true)
+  // const [is_clicked, setClicked] = useState(true)
 
   return (
     <>
-    <sidebar_isclicked.Provider value={ {is_clicked:is_clicked, setClicked:setClicked} }>
+    {/* <sidebar_isclicked.Provider value={ {is_clicked:is_clicked, setClicked:setClicked} }> */}
         <Behindnavbar />
-        {<Aside />}
-      </sidebar_isclicked.Provider>
+        {/* <See_details/> */}
+      
             <Categories />
       <Recentlisting />
       <Toplisting/>
       <Meetagent/>
       <Testimonial/>
+      {/* </sidebar_isclicked.Provider> */}
       
     </>
   )

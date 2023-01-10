@@ -1,19 +1,19 @@
 import React,{useState,useContext,useEffect,memo} from 'react'
 import '../css/Aside.css'
 import {Link} from "react-router-dom"
-import {sidebar_isclicked} from './Home'
+// import {sidebar_isclicked} from './Home'
 function Aside() {
-  const{is_clicked, setClicked}=useContext(sidebar_isclicked);
-  React.useEffect(()=>{},[is_clicked])
+  // const{is_clicked, setClicked}=useContext(sidebar_isclicked);
+  // React.useEffect(()=>{},[is_clicked])
   return (
     <>
 
-      <div className={is_clicked?"aside-main":"aside-main open"}>
+      <div className={"aside-main"}>
         <div className="menu-outer">
-          <span className="heading-mob">Menu</span>
+          {/* <span className="heading-mob">Menu</span>
           <i className="icon cross" onClick={()=>{
             setClicked(prev=>!prev)
-          }}> </i>
+          }}> </i> */}
         </div>
         <div className="aside-scroll">
           <ul>

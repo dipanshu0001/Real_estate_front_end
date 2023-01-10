@@ -69,9 +69,7 @@ function Recentlisting() {
             // console.log(ele)
             <Agenttemplate agent={ele} key={index} isagent={true} />
           ))
-
         }
-
       </Slider>
     </div>
   )

@@ -20,7 +20,7 @@ const settings = {
   slidesToShow: 3,
   slidesToScroll: 1,
   initialSlide: 0,
-  className: 'slider',
+  className: 'meet_sliders',
   responsive: [
     {
       breakpoint: 800,
@@ -54,7 +54,10 @@ const settings = {
 const Meetagent= () => {
   return (
     <div className="meet-agent-main">
-      <Heading small="our Backbone" large="Meet our Agents"/>
+      {/* <div > */}
+      <Heading className="heading" small="Our Backbone" large="Meet our Agents"/>
+
+      {/* </div> */}
       <div className="meet-agent-content">
       <Slider {...settings} >      {
         data.map((ele,index)=>(

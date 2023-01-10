@@ -8,12 +8,21 @@ body {
   --s-width:800px;
   --m-widht:900px;
   --l-width:1200px;
+  --common-desktop-width:80%;
+  --Heading-div-width:90%;
+  --mob-div-width:100%;
+  --mob-l-r-margin:20px;
+  --mob-large-font:medium;
+  --mob-small-font:small;
+  --mob-margin-t:30px;
 }
 
-code {
+code 
+{
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 body, html {
   height:100%;
+  overflow-x: hidden;
 }

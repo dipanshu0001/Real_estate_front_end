@@ -12,6 +12,7 @@ import Display_categories from './Display_categories'
 import Agent_details from './Agent_detail'
 import Top_listing_detail from './Top_listing_detail'
 import Not_found from './Not_found' 
+import All_feedback from './All_feedback';
 
 
 function App() {
@@ -30,7 +31,8 @@ function App() {
         <Route path="/See_details/:id" element={<See_details/>}/>
         <Route path="/Agent_details/:id" element={<Agent_details/>}/>
         <Route path="/Top_listing_detail/:id" element={<Top_listing_detail/>}/>
-        <Route path="*" element={<Not_found/>}/>
+        <Route path="/All_feedback/" element={<All_feedback/>}/>
+<Route path="*" element={<Not_found/>}/>
       </Routes>
     </>
 

@@ -51,3 +51,11 @@
     align-items: center;
 }
 }
+@media only screen and (max-width:1000px) {
+    .cat-d-main{
+        width:var(--mob-div-width);
+        /* background-color: red; */
+        /* margin:0px; */
+    }
+    
+}
