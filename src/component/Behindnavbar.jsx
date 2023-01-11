@@ -1,8 +1,7 @@
 import React, { useEffect,useContext,useState,memo } from 'react'
 import Navbar from './Navbar';
 import '../css/common.css'
-import { navbarImage } from '../databse/nav-bar-database'
-import img from '../images/drawing_room.jpg'
+// import { navbarImage } from '../databse/nav-bar-database'
 import { CiRuler } from "react-icons/ci";
 import { GiBathtub } from "react-icons/gi";
 import { BiBed } from "react-icons/bi";
@@ -19,7 +18,7 @@ import '../css/Behindnavbar.css'
 
 
 
-function Behindnavbar() {
+function Behindnavbar({navbarImage,details,is_details}) {
  
   const [index, setindex] = useState(0);
   const data = navbarImage[index];
@@ -55,20 +54,20 @@ function Behindnavbar() {
             <div   className="main-img" >
               <img  src={data.img} />
             </div>
-            <div className="arrow">
+            { is_details!==true &&<div className="arrow">
               <MdOutlineArrowBackIosNew size={50} onClick={dec} />
               <MdOutlineArrowForwardIos size={50} onClick={inc} />
-            </div>
+            </div>}
           </div>
         </div>
         <div style={{height:"100%"}}>
           <MediaContextProvider>
             <Media lessThan="lg">
-              <Mobilenavbar data={data} />
+              <Mobilenavbar data={data} details={details} />
 
             </Media>
             <Media greaterThan="lg">
-              <DesktopNavbar data={data} />
+              <DesktopNavbar data={data}  details={details}/>
 
             </Media>
           </MediaContextProvider>

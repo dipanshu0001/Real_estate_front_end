@@ -1,19 +1,17 @@
 import React,{memo} from 'react'
 import '../css/DesktopNavbar.css'
-import { navbarImage } from '../databse/nav-bar-database'
-import img from '../images/drawing_room.jpg'
 import { CiRuler } from "react-icons/ci";
 import { GiBathtub } from "react-icons/gi";
 import { BiBed } from "react-icons/bi";
 import { BsCalendar3 } from "react-icons/bs";
-import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
-import { Media, MediaContextProvider } from '../media/breakpoint';
+// import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
+// import { Media, MediaContextProvider } from '../media/breakpoint';
 // import Mobilenavbar from './Mobilenavbar'
 // import DesktopNavbar from './DesktopNavbar';
 import { AiOutlineStar, AiFillStar, AiOutlineShareAlt } from "react-icons/ai";
 import { L_r_button } from './Buttons';
 
-function DesktopNavbar({data}) {
+function DesktopNavbar({data,details}) {
   const[isfav,setfav]=React.useState(data.fav);
   return (
     <div>
@@ -21,7 +19,7 @@ function DesktopNavbar({data}) {
         <div className="list-l">
           <div className="l-details">
             <L_r_button
-            data="See Details" className="btn"  Where_to={`See_details/${data.id}`}/>
+            data={details} className="btn"  Where_to={`See_details/${data.id}`}/>
             </div>  
           <div className="l-price">
             <div className="for-sale">

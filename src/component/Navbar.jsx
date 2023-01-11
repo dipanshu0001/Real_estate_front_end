@@ -18,7 +18,7 @@ import Form from './Form'
 
 function Navbar() {
   const navigate = useNavigate();
-  const [ is_clicked, setClicked ] = useState(false);
+  const [ is_clicked, setClicked ] = useState(true);
   const [isSticky, setSticky] = useState(false)
   // const [ishum, setHum] = useState(false)
   // useEffect(() => {
@@ -28,13 +28,16 @@ function Navbar() {
     let nav_bar = document.getElementsByClassName("bottom-navbar")[0];
     let navbar_main = document.getElementsByClassName("navbar-main")[0];
     let upper_bar = document.getElementsByClassName("upper-navbar")[0];
+    // const height=100px;
     // var sticky=nav_bar.offsetTop;
+    // console.log(window.scrollY)
 
-    if (window.pageYOffset > nav_bar.offsetTop) {
+    if (window.scrollY >100 ) {
       nav_bar.classList.add("sticky")
       upper_bar.classList.add("hidden")
       navbar_main.classList.add("width")
       setSticky(true)
+      // console.log("ehjfksjdkfjsdf")
       // upper_bar.classList.add("hidden");
     }
     else {
@@ -42,15 +45,15 @@ function Navbar() {
       upper_bar.classList.remove("hidden")
       navbar_main.classList.remove("width")
       setSticky(false)
+      // console.log("ehjfksjdkfjsdf")
       // upper_bar.classList.remove("hidden");
     }
   }
   useEffect(() => {
-    if (isSticky === false)
-      window.onscroll = function () {
-        myFunction()
-      }
-  }, [isSticky,is_clicked])
+    // if (isSticky === false)
+      window.addEventListener('scroll',myFunction)
+      // console.log("helo from navbar ")
+  }, [isSticky])
   const changeHum = () => {
     // setHum(prev => !prev)
     // setClicked(ishum)
@@ -100,7 +103,9 @@ function Navbar() {
             <GoThreeBars size={30} />
           }
         </div>
-        {
+        
+      </div>
+      {
         (<div className={is_clicked?"aside-main":"aside-main open"}>
         <div className="menu-outer" >
           <span className="heading-mob">Menu</span>
@@ -173,7 +178,6 @@ function Navbar() {
 
 
       </div>)}
-      </div>
 
     </div>
   )

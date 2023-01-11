@@ -15,6 +15,8 @@ import SignUp from './SignUp';
 import Login from './Login';
 import Testimonial from './Testimonial';
 import See_details from './See_details';
+import { navbarImage } from '../databse/nav-bar-database'
+
 
 
 
@@ -26,9 +28,7 @@ function Home() {
   return (
     <>
     {/* <sidebar_isclicked.Provider value={ {is_clicked:is_clicked, setClicked:setClicked} }> */}
-        <Behindnavbar />
-        {/* <See_details/> */}
-      
+        <Behindnavbar navbarImage={navbarImage} details="See details"  is_details={false} />
             <Categories />
       <Recentlisting />
       <Toplisting/>

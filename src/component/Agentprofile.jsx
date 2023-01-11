@@ -2,7 +2,7 @@ import React from 'react'
 import {L_r_button} from './Buttons';
 import '../css/Agentprofile.css'
 function Agentprofile({a_img,Name,text,id}) {
-  console.log(text);
+  // console.log(text);
   return (
     <div className="agent-outer">
       <div className="agent-inner">

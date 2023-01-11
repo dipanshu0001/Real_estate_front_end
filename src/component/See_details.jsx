@@ -1,13 +1,24 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom'
+import Behindnavbar from './Behindnavbar'
 import Navbar from './Navbar'
+import { navbarImage } from '../databse/nav-bar-database'
+import { GiWhirlwind } from 'react-icons/gi'
 // import { sidebar_isclicked } from './Home'
 function See_details() {
-  const{id}=useParams()
+  const{id}=useParams();
+  const[data,setData]=useState({});
+  useEffect(() => {
+// setData(navbarImage.find((ele)=>ele.id===id));
+console.log(typeof(id));
+
+setData(navbarImage.find(ele=>ele.id==id));
+
+  }, [])
   return (
     <div>
       {/* <Navbar/> */}
-      <h1>helllo</h1>
+      <Behindnavbar navbarImage={navbarImage} details="Printing Deatils" is_details={true}/>
     </div>
   )
 }
