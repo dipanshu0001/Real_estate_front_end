@@ -23,7 +23,8 @@ function See_details() {
       {/* <Suspense fallback={<h4>Loading</h4>} */}
       <Behindnavbar navbarImage={navbarImage} details="Printing Deatils" is_details={true}/>
       <Suspense fallback={<h4>Loading ....</h4>}>
-      <Property_details data={navbarImage[id-1]}/>
+      <Property_details detail_data={navbarImage[id-1]}/>
+      <Property_details detail_data={navbarImage[id-1]}/>
       </Suspense>
     </div>
   )

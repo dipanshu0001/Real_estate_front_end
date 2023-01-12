@@ -44,7 +44,7 @@ export const navbarImage = [
                 distance: "1.5km"
 
             }],
-        Education: [
+        education: [
             {
                 name: "Sacred Heart Conevent School",
                 star: 4.5,
