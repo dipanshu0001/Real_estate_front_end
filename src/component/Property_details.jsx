@@ -9,12 +9,18 @@ import { L_r_button } from './Buttons';
 
 function Property_details({ detail_data }) {
     const [agent_data, setdata] = useState({})
-    const[is_sticky,set_sticky]=useState(false)
     const [clicked,setClicked] = useState(false);
     const [form_data,set_data] = useState({
         email:"",
         phone:"",
         message:""
+    });
+    const [tour_data,set_Tour_Data] = useState({
+        name:"",
+        email:"",
+        phone:"",
+        date:"",
+        comment:""
     });
     const index=()=>{
         const k = Math.log10(data.length - 1)
@@ -22,39 +28,34 @@ function Property_details({ detail_data }) {
     const index = Math.floor(Math.random() * val)
     return index
     }
-    const change_sticky=()=>{
-        const side_form=document.getElementsByClassName("right-main")[0];
-
-        // if(is_sticky===true && window.scrollY<=929.5999755859375)
-        // {
-        //     side_form.classList.remove('right_sticky')
-        //     set_sticky(prev=>!prev)
-        // }
-        if(window.scrollY>929.5999755859375 && window.scrollY<=1700.199951171875 ){
-            side_form.classList.add("right_sticky");
-            console.log("HA HA BHAI HA")
-            set_sticky(prev=>!prev)
-        }
-        else if(window.scrollY>1700.199951171875 ){
-            side_form.classList.remove('right_sticky')
-            set_sticky(prev=>!prev)
-        }
-         
-    }
     
     useEffect(() => {
         const val=index()
         setdata(data[val]);
-        console.log(data[val]);
-        window.addEventListener('scroll',change_sticky())
-        console.log(is_sticky)
-    }, [is_sticky])
+    },[])
      
     const f=(e)=>{
         e.preventDefault();
         console.log(form_data);
+        set_data({
+            email:"",
+            phone:"",
+            message:""
+        })
 
     }
+    const change_tour=(e)=>{
+        e.preventDefault();
+                console.log(tour_data);
+                set_Tour_Data({
+                    name:"",
+                    email:"",
+                    phone:"",
+                    date:"",
+                    comment:""
+                })
+
+            }
     return (
         <div className="property-details-main">
             <div className="left-main">
@@ -79,12 +80,12 @@ function Property_details({ detail_data }) {
                     <ProgressBar variant='info' now={50} min={0} max={100} />
                     <div className="range-value">
                         <div className="low">
-                            <p>{detail_data.lowest}</p>
+                            <h6>{detail_data.lowest}</h6>
                             <p>Lowest</p>
                         </div>
-                        <div className="middle"><h3>Price range in the area</h3></div>
+                        <div className="middle"><h5>Price range in the area</h5></div>
                         <div className="high">
-                            <p>{detail_data.highest}</p>
+                            <h6>{detail_data.highest}</h6>
                             <p>Highest</p>
                         </div>
                     </div>
@@ -115,7 +116,7 @@ function Property_details({ detail_data }) {
                         </ul>
                     </div>
                     <div className="n-1">
-                        <h5 style={{ color: "#ff4764" }}>Educationf</h5>
+                        <h5 style={{ color: "#ff4764" }}>Education</h5>
                         <ul>
                             {
                                 detail_data.education.map((ele, index) => (
@@ -159,9 +160,24 @@ function Property_details({ detail_data }) {
                         </ul>
                     </div>
                 </div>
+                <div className="tour_form">
+                    <center><h4>Sechdule Tour </h4></center>
+                    <form className="form" onSubmit={change_tour}>
+                        <div className="input_div">
+                        <input placeholder="Full Name"  className='input_areas' type="text" value={tour_data.name}onChange={(e)=>(set_Tour_Data(prev=>({...prev,name:e.target.value})))}/>
+                        <input placeholder="Email Address" className='input_areas' type="email" value={tour_data.email}onChange={(e)=>(set_Tour_Data(prev=>({...prev,email:e.target.value})))}/>
+                        <input placeholder="Phone number" type="number"  className='input_areas' value={tour_data.phone} onChange={(e)=>(set_Tour_Data(prev=>({...prev,phone:e.target.value})))}/>
+                        <input placeholder="Date" type="date" className='input_areas' value={tour_data.date} onChange={(e)=>(set_Tour_Data(prev=>({...prev,date:e.target.value})))}/>
+                        </div>
+                        
+                        <textarea rows="8" cols="5" className=" input_div textarea_div" placeholder="comments" value={tour_data.comment} onChange={(e)=>(set_Tour_Data(prev=>({...prev,comment:e.target.value})))}/>
+                    </form>
+                    <L_r_button data="Schedule Tour"/> 
 
+                </div>
             </div>
             <div className="right-main">
+                <div className="right_sticky">
                 <h3>Meet The Agent</h3>
                 <div className='agent-main'>
                     <div className="img">
@@ -194,6 +210,7 @@ function Property_details({ detail_data }) {
                     <textarea className="input_areas" placeholder="Enter Message" value={form_data.message} onChange={(e)=>set_data(prev=>{return{...prev,message:e.target.value}})}/>
                     <L_r_button data="Send Message"/> 
                 </form>
+            </div>
             </div>
 
         </div>

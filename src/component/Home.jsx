@@ -1,21 +1,17 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, lazy, Suspense } from 'react';
 import Meetagent from './Meetagent';
 import Agentprofile from './Agentprofile';
-import Behindnavbar from './Behindnavbar';
-import Agenttemplate from './Agenttemplate';
 import Footer from './Footer';
-import Navbar from './Navbar';
-import Ownblog from './Ownblog';
-import Recentlisting from './Recentlisting';
-import Testimonal from './Testimonal';
-import Toplisting from './Toplisting';
-import Aside from './Aside';
-import Categories from './Categories';
-import SignUp from './SignUp';
-import Login from './Login';
-import Testimonial from './Testimonial';
-import See_details from './See_details';
 import { navbarImage } from '../databse/nav-bar-database'
+const Behindnavbar = lazy(() => import('./Behindnavbar'));
+
+const Recentlisting = lazy(() => import('./Recentlisting'));
+const Testimonial = lazy(() => import('./Testimonial'));
+const Toplisting = lazy(() => import('./Toplisting'));
+const Categories = lazy(() => import('./Categories'));
+// import SignUp from './SignUp';
+// import Login from './Login';
+
 
 
 
@@ -27,15 +23,16 @@ function Home() {
 
   return (
     <>
-    {/* <sidebar_isclicked.Provider value={ {is_clicked:is_clicked, setClicked:setClicked} }> */}
-        <Behindnavbar navbarImage={navbarImage} details="See details"  is_details={false} />
-            <Categories />
-      <Recentlisting />
-      <Toplisting/>
-      <Meetagent/>
-      <Testimonial/>
+      <Suspense fallback={<h1>Loading.....</h1>}>
+        <Behindnavbar navbarImage={navbarImage} details="See details" is_details={false} />
+        <Categories />
+        <Recentlisting />
+        <Toplisting />
+        <Meetagent />
+        <Testimonial />
+      </Suspense>
       {/* </sidebar_isclicked.Provider> */}
-      
+
     </>
   )
 }
