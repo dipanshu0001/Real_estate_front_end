@@ -24,11 +24,16 @@ function App() {
         <Route path="/Blogs" element={<Blogs/>}/>
         <Route path="/Blogs" element={<Blogs/>}/>
         <Route path="/Agents" element={<Agents/>}/>
-        <Route path="/Listing" element={<Listing/>}/>
+        <Route path="/Listing" element={<Listing/>} >
+          {/* <Route path="/"  */}
+          <Route path="See_details/:id" element={<See_details/>}/>
+          <Route path="*" element={<Not_found/>}/>
+        </Route>
         <Route path="/Agency" element={<Agency/>}/>
         <Route path="/Form" element={<Form/>}/>
         <Route path="/categories/:category" element={<Display_categories/>}/>
         <Route path="/See_details/:id" element={<See_details/>}/>
+        {/* <Route path="Listing/See_details/:id" element={<See_details/>}/> */}
         <Route path="/Agent_details/:id" element={<Agent_details/>}/>
         <Route path="/Top_listing_detail/:id" element={<Top_listing_detail/>}/>
         <Route path="/All_feedback/" element={<All_feedback/>}/>

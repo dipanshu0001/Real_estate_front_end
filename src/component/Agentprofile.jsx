@@ -14,7 +14,6 @@ function Agentprofile({a_img,Name,text,id}) {
           <p>{text}</p>
         </div>
         <L_r_button data="view" Where_to={`Agent_details/${id}`}/>
-        
 
       </div>
 

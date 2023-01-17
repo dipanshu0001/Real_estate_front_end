@@ -2,6 +2,7 @@ import React, { memo } from 'react'
 import '../css/Recentlisting.css'
 import Agenttemplate from './Agenttemplate'
 import { data } from '../databse/agentdata'
+import { navbarImage } from '../databse/nav-bar-database'
 // import { Carousel } from 'react-responsive-carousel';
 import { BiArrowToRight } from 'react-icons/bi';
 import Slider from 'react-slick';
@@ -65,7 +66,7 @@ function Recentlisting() {
     <Heading small="Find your Home" large="Recent Listing"/>
       <Slider {...settings} >
         {
-          data.map((ele, index) => (
+          navbarImage.map((ele, index) => (
             // console.log(ele)
             <Agenttemplate agent={ele} key={index} isagent={true} />
           ))

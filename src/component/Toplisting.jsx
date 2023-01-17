@@ -5,17 +5,18 @@ import "slick-carousel/slick/slick-theme.css";
 import '../css/TopListingTemp.css'
 import '../css/common.css'
 import {data} from '../databse/agentdata';
+import {navbarImage} from "../databse/nav-bar-database"
 import Agenttemplate from './Agenttemplate';
 import Heading from '../common_components/Heading';
 const settingses = 
 {
-  dots: false,
-  // infinite: true,
+  dots: true,
+  infinite: true,
   speed: 1000,
   arrows:false,
-  // autoplay:true,
-  // mobilefirst:true,
-  // autoplaySpeed:4500,
+  autoplay:true,
+  mobilefirst:true,
+  autoplaySpeed:4500,
   cssEase: "linear",
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -31,7 +32,7 @@ function Toplisting() {
 
 
       <Slider {...settingses}>
-        {data.map((ele,index)=>(<Agenttemplate agent={ele} key={index} isagent={false}/>))}
+        {navbarImage.map((ele,index)=>(<Agenttemplate agent={ele} key={index} isagent={false}/>))}
       </Slider>
 
     </div>

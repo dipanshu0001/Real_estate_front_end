@@ -8,9 +8,11 @@
     flex-direction: column;
     
 }
+
 .agent-outer{
     /* width:calc(100%-10px); */
     width:90%;
+    min-height: 511px;
     margin: 10px auto;
     box-sizing: border-box;
     box-shadow: 5px 5px 20px gray;
@@ -101,8 +103,11 @@
 .drop-down {
     position: absolute;
     z-index: 5;
+    /* padding:20px; */
+    /* top:-5px; */
+    margin:0px;
     border:1px solid gray;
-    transform: translate(-180px, 10px);
+    transform: translate(-165px, 0px);
     background-color: whitesmoke;
     border-radius: 10px;
 }
@@ -113,6 +118,7 @@
 
 .agent-d {
     padding: 5px 20px;
+    font-size: normal;
 }
 
 .agent-d a {

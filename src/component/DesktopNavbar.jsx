@@ -25,7 +25,7 @@ function DesktopNavbar({data,details}) {
             <div className="for-sale">
 
               <span className="grey-text">FOR SALE</span>
-              <span>{data.For_Sale}</span>
+              <span>{data.price}</span>
             </div>
             <div className="mortage">
               <span className="grey-text">EST.MORTAGE</span>
@@ -38,11 +38,11 @@ function DesktopNavbar({data,details}) {
 
           </div>
           <div className="l-price m-details">
-            <div className="m-head">{data.Location}</div>
+            <div className="m-head">{data.location}</div>
             <div className="m-size">
-              <span className="Beds"><BiBed size={30} /> <span className="grey-text">BEDS</span> <span>{data.Beds}</span></span>
-              <span className="Baths"><GiBathtub size={30} /> <span className="grey-text">Baths</span> <span>{data.Baths}</span></span>
-              <span className="SQFT"><CiRuler size={30} /> <span className="grey-text">SQFT</span><span>{data.SQFT}</span></span>
+              <span className="Beds"><BiBed size={30} /> <span className="grey-text">BEDS</span> <span>{data.bed}</span></span>
+              <span className="Baths"><GiBathtub size={30} /> <span className="grey-text">Baths</span> <span>{data.bath}</span></span>
+              <span className="SQFT"><CiRuler size={30} /> <span className="grey-text">SQFT</span><span>{data.size}</span></span>
             </div>
             <div className="m-extra">Lorem Ipsum is simply dummy text of
               the printing and typesetting industry. Lorem Ipsum has been

@@ -10,10 +10,11 @@ import { GiBathtub } from "react-icons/gi";
 import { BiBed } from "react-icons/bi";
 import Badge from 'react-bootstrap/Badge';
 import {  GrFavorite} from "react-icons/gr";
+import { Outlet } from 'react-router-dom';
 
 
 
-function Agenttemplate({ agent,isagent }) {
+function Agenttemplate({ agent,isagent ,is_blank}) {
   const [clicked,setClicked] = useState(false);
   return (
     <div className={isagent?"agent-outer":"top-list-outer"}>
@@ -87,12 +88,13 @@ function Agenttemplate({ agent,isagent }) {
         {
         isagent&&(
         <div className="button-footer">
-          <L_r_button data="view Details" Where_to={`Top_listing_detail/${agent.id}`}/>
+          <L_r_button data="view Details" Where_to={`See_details/${agent.id}`} is_blank={is_blank}/>
           {/* <i></i> */}
         </div>)
         }
 
       </div>
+      <Outlet/>
      </div>
   )
 }

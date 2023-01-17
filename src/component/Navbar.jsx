@@ -88,9 +88,9 @@ function Navbar() {
         <li className={"outer-logo"}>
           <div className="links">
             <li><Link to="/"><h6>Home Page</h6></Link></li>
-            <li><Link to="/Blogs" target="_blank"><h6>Blog</h6></Link></li>
-            <li><Link to="/Listings" target="_balnk"><h6>Listings</h6></Link></li>
-            <li><Link to="/Agents" target="_blank"><h6>Agents</h6></Link></li>
+            {/* <li><Link to="/Blogs"><h6>Blog</h6></Link></li> */}
+            <li><Link to="/Listing" ><h6>Listings</h6></Link></li>
+            <li><Link to="/Agents" ><h6>Agents</h6></Link></li>
             <li><Link to="/Agency"><h6>Agency</h6></Link></li>
           </div>
           <L_r_button data="Submit Listing+" Where_to="Form" />

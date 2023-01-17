@@ -9,7 +9,7 @@ const Property_details=lazy(()=>import("./Property_details"))
 // import { sidebar_isclicked } from './Home'
 function See_details() {
   const{id}=useParams();
-  const[data,setData]=useState({});
+  // const[data,setData]=useState({});
 //   useEffect(() => {
 // // setData(navbarImage.find((ele)=>ele.id===id));
 // console.log(typeof(id));
@@ -23,7 +23,7 @@ function See_details() {
       {/* <Suspense fallback={<h4>Loading</h4>} */}
       <Behindnavbar navbarImage={navbarImage} details="Printing Deatils" is_details={true}/>
       <Suspense fallback={<h4>Loading ....</h4>}>
-      <Property_details detail_data={navbarImage[id-1]}/>
+      <Property_details detail_data={navbarImage[id]}/>
       {/* <Property_details detail_data={navbarImage[id-1]}/> */}
       </Suspense>
     </div>

@@ -17,7 +17,7 @@ function Mobilenavbar({ data,details }) {
             <div className="mob-lisiting-css" >
                 <div className="mob-list-m">
                     <div className="mob-l-price mob-m-details">
-                        <div className="mob-m-head">{data.Location}</div>
+                        <div className="mob-m-head">{data.location}</div>
                         <div className="mob-m-extra">Lorem Ipsum is simply dummy text of
                             the printing and typesetting industry. Lorem Ipsum has been
                             the industry's standard dummy like Aldus PageMaker including
@@ -42,7 +42,7 @@ function Mobilenavbar({ data,details }) {
                     <div className="mob-l-price">
                         <div className="mob-for-sale">
                             <span className="grey-text">FOR SALE</span>
-                            <span>{data.For_Sale}</span>
+                            <span>{data.price}</span>
                         </div>
                         <div className="mob-mortage">
                             <span className="grey-text">EST.MORTAGE</span>

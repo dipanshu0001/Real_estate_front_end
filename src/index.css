@@ -26,3 +26,10 @@ body, html {
   min-height:100%;
   overflow-x: hidden;
 }
+li,ul,hr{
+  margin:0px;
+  padding:0px;
+}
+::-webkit-scrollbar{
+  scroll-behavior: smoothness;
+}
