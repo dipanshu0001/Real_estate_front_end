@@ -68,7 +68,7 @@ function Recentlisting() {
         {
           navbarImage.map((ele, index) => (
             // console.log(ele)
-            <Agenttemplate agent={ele} key={index} isagent={true} />
+            <Agenttemplate agent={ele} key={index} isagent={true} is_blank={false}/>
           ))
         }
       </Slider>

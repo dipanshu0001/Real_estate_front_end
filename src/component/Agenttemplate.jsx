@@ -17,15 +17,15 @@ import { Outlet } from 'react-router-dom';
 function Agenttemplate({ agent,isagent ,is_blank}) {
   const [clicked,setClicked] = useState(false);
   return (
-    <div className={isagent?"agent-outer":"top-list-outer"}>
+    <div className={isagent?"agent-outer  listing_content":"top-list-outer"}>
       <div className={isagent?"agent-main":"top-list-main"}>
         {
         !isagent
         ?(<div className="top-list-bg-img-outer"><img src={agent.bck_img} className="top-list-bg-img"/></div>)
         :(<div className="bckimg">
-          <a href="#">
+          {/* <a href="#"> */}
             <img src={agent.bck_img} />
-          </a>
+          {/* </a> */}
           <div className="pending">
             {agent.pending && <Badge bg="danger" className="p_btn">
               Pending

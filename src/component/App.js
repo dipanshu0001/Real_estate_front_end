@@ -10,9 +10,10 @@ import Listings from './Listings';
 import Form from './Form';
 import Display_categories from './Display_categories'
 import Agent_details from './Agent_detail'
-import Top_listing_detail from './Top_listing_detail'
+// import Top_listing_detail from './Top_listing_detail'
 import Not_found from './Not_found' 
 import All_feedback from './All_feedback';
+import ToplistingTemplate from './ToplistingTemplate';
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/Blogs" element={<Blogs/>}/>
+        <Route path="/Blogs" element={<ToplistingTemplate/>}/>
         <Route path="/Blogs" element={<Blogs/>}/>
         <Route path="/Agents" element={<Agents/>}/>
         <Route path="/Listing" element={<Listing/>} >
@@ -35,7 +36,7 @@ function App() {
         <Route path="/See_details/:id" element={<See_details/>}/>
         {/* <Route path="Listing/See_details/:id" element={<See_details/>}/> */}
         <Route path="/Agent_details/:id" element={<Agent_details/>}/>
-        <Route path="/Top_listing_detail/:id" element={<Top_listing_detail/>}/>
+        {/* <Route path="/Top_listing_detail/:id" element={<Top_listing_detail/>}/> */}
         <Route path="/All_feedback/" element={<All_feedback/>}/>
 <Route path="*" element={<Not_found/>}/>
       </Routes>

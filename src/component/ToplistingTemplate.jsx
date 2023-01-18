@@ -2,59 +2,13 @@ import React from 'react'
 
 function ToplistingTemplate() {
   return (
-    <div>
-
-<div className="agent-main">
-        <div className="bckimg">
-        </div>
-        <div className='content'>
-          <div className="agent-div">
-            <div className="agent-img">
-              <img src={agent.a_img} />
-            </div>
-            <div className="agent-detail-button">
-              <div className="agent-detail">
-                <span className="small-heading">{agent.Name}</span>
-                <span className="grey-text">{agent.date}</span>
-              </div>
-              <div className="outer-drop-down" onClick={() => { setClicked(prev => !prev) }}>
-                <BsThreeDotsVertical  />
-                {
-                  clicked && (<div className="drop-down">
-                    <ul>
-                      <li className="agent-d blue"><a> < BsTelephone /><span className='small-icon-drop'>call Agent</span></a></li>
-                      <hr />
-                      <li className="agent-d blue"><a><BiMessageAltDetail /><span className='small-icon-drop'>Send Message</span></a></li>
-                      <hr />
-                      <li className="agent-d blue"><a><BsFillBookmarkFill /><span className='small-icon-drop'>Book Listing</span></a></li>
-                    </ul>
-                  </div>)
-                }
-
-              </div>
-            </div>
-          </div>
-
-          <span className="location x-small-heading">{agent.location}</span>
-          {/* location details */}
-          <span className="price small-heading blue_nohover">{agent.price}<span className='grey-text'>/month</span></span>
-          {/* price details */}
-          <span className="text">{agent.text}</span>
-          {/* text details */}
-          {/* beds details */}
-          <div className="other-detail">
-            <span className="details-extra"><span><BiBed /></span><span>{agent.bed}</span></span>
-            <span className="details-extra"><span><GiBathtub /></span><span>{agent.bath}</span></span>
-            <span className="details-extra"><span><CiRuler /></span><span>{agent.size}</span></span>
-          </div>
-        </div>
-        <div className="button-footer">
-          <L_r_button data="view Details" />
-          {/* <i></i> */}
-        </div>
-
+    <>
+    <h1> Google Mapping</h1>
+    <div style={{width: "100%"}}>
+      <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=chitkara%20university+(My%20Business%20Name)&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
       </div>
-    </div>
+    </>
+    
   )
 }
 

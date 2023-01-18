@@ -16,7 +16,7 @@ import Aside from './Aside';
 import { Link, useNavigate } from "react-router-dom"
 import Form from './Form'
 
-function Navbar() {
+function Navbar({islisting}) {
   const navigate = useNavigate();
   const [ is_clicked, setClicked ] = useState(true);
   const [isSticky, setSticky] = useState(false)
@@ -63,8 +63,8 @@ function Navbar() {
   }
 
   return (
-    <div className="navbar-main">
-      <div className="upper-navbar">
+    <div className={!islisting?"navbar-main":"navbar-main navbar_width"}>
+      <div className={!islisting?"upper-navbar":"upper-navbar no_radius"}>
         <div className="social-links">
           <a href="https://www.facebook.com/login/" target="_blank"><FiFacebook className="fb" /></a>
           <a href="https://in.pinterest.com/login/" target="_blank"><FaPinterestP className="pintrest" /></a>
@@ -88,7 +88,7 @@ function Navbar() {
         <li className={"outer-logo"}>
           <div className="links">
             <li><Link to="/"><h6>Home Page</h6></Link></li>
-            {/* <li><Link to="/Blogs"><h6>Blog</h6></Link></li> */}
+            <li><Link to="/Blogs"><h6>toplisting</h6></Link></li>
             <li><Link to="/Listing" ><h6>Listings</h6></Link></li>
             <li><Link to="/Agents" ><h6>Agents</h6></Link></li>
             <li><Link to="/Agency"><h6>Agency</h6></Link></li>

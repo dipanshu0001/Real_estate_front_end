@@ -2,6 +2,7 @@ a{
     margin:0px;
     padding:0px;
 }
+
 .navbar-main{
     display:flex;
     flex-direction: column;
@@ -20,6 +21,14 @@ a{
 
     /* margin:3% 10%; */
 }
+.navbar_width{
+    width:100%;
+    margin:0px;
+    margin-bottom: 20px;
+    background-color: red;
+    padding:0px;
+    /* border-radius: 0px; */
+}
 .upper-navbar{
     display: flex;
     border-bottom: 1px solid black;
@@ -36,6 +45,9 @@ a{
     margin-top: 0px;
     /* top:0px; */
     justify-content: space-between;
+}
+.no_radius{
+    border-radius: 0px;
 }
 
 .social-links{
