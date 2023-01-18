@@ -32,7 +32,7 @@ function Toplisting() {
 
 
       <Slider {...settingses}>
-        {navbarImage.map((ele,index)=>(<Agenttemplate agent={ele} key={index} isagent={false}/>))}
+        {navbarImage.map((ele,index)=>(<Agenttemplate agent={ele} key={index} isagent={false} is_blank={true}/>))}
       </Slider>
 
     </div>

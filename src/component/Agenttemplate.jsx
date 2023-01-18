@@ -81,7 +81,7 @@ function Agenttemplate({ agent,isagent ,is_blank}) {
             <span className="details-extra"><span><CiRuler /></span><span>{agent.size}</span></span>
           </div>
           {!isagent&&(<div className="button-footer">
-          <L_r_button data="view Details" Where_to={`Top_listing_detail/${agent.id}`}/>
+          <L_r_button data="view Details" Where_to={`See_details/${agent.id}`} is_blank={is_blank}/>
           {/* <i></i> */}
         </div>)}
         </div>
