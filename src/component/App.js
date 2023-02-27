@@ -3,7 +3,7 @@ import Home from './Home'
 import Blogs from './Blogs'
 import Listing from './Listings'
 import Agents from './Agents'
-import Agency from './Agency'
+// import Agency from './Agency'
 import See_details from './See_details'
 import { Routes, Route } from "react-router-dom"  
 import Listings from './Listings';
@@ -14,14 +14,22 @@ import Agent_details from './Agent_detail'
 import Not_found from './Not_found' 
 import All_feedback from './All_feedback';
 import ToplistingTemplate from './ToplistingTemplate';
+import Login from './Login';
+import SignUp from './SignUp';
+import Navbar from './Navbar';
 
 
 function App() {
   // React.useEffect(()=>{console.log(is_clicked)},[is_clicked])
   return (
     <>
+    {/* <Login/> */}
+    {/* <Login/>  */}
+    <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="/Login" element={<Login/>}/>
+        <Route path="/Singup" element={<SignUp/>}/>
         <Route path="/Blogs" element={<ToplistingTemplate/>}/>
         <Route path="/Blogs" element={<Blogs/>}/>
         <Route path="/Agents" element={<Agents/>}/>
@@ -30,7 +38,7 @@ function App() {
           <Route path="See_details/:id" element={<See_details/>}/>
           <Route path="*" element={<Not_found/>}/>
         </Route>
-        <Route path="/Agency" element={<Agency/>}/>
+        {/* <Route path="/Agency" element={<Agency/>}/> */}
         <Route path="/Form" element={<Form/>}/>
         <Route path="/categories/:category" element={<Display_categories/>}/>
         <Route path="/See_details/:id" element={<See_details/>}/>

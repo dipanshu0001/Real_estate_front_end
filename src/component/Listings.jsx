@@ -11,7 +11,7 @@ function Listings() {
     <>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <div style={{ height: "130px", margin: "0px" }}>
-          <Navbar islisting={true} />
+          {/* <Navbar islisting={true} /> */}
         </div>
 
         <div className="listings">

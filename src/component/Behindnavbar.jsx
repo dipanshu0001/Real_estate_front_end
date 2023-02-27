@@ -49,7 +49,7 @@ function Behindnavbar({navbarImage,details,is_details}) {
       <div className="behind-main" >
         {/* <Navbar /> */}
         <div className="img-div">
-          <Navbar />
+          {/* <Navbar /> */}
           <div className="img">
             <div   className="main-img" >
               <img  src={data.img} />
