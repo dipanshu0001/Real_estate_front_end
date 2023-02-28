@@ -21,6 +21,7 @@ function Navbar({ islisting }) {
   const navigate = useNavigate();
   const [is_clicked, setClicked] = useState(true);
   const [isSticky, setSticky] = useState(false)
+  const [showmodal, setmodal] = useState(false)
   // const [ishum, setHum] = useState(false)
   // useEffect(() => {
   // }, [is_clicked])
@@ -74,7 +75,7 @@ function Navbar({ islisting }) {
         </div>
         <div className="login-signup">
           
-            <span><Link to='/Login'>   Login</Link></span>
+            <span ><Link to='/Login'>   Login</Link></span>
           
           <span>or</span>
           <span><Link to='/singup'>Singup</Link> </span>

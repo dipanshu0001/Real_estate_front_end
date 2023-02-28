@@ -80,7 +80,7 @@ function Login() {
                                 <label>Remember me</label>
 
                             </div>
-                            <Button as="a" variant="primary" style={{alignItems:"center"}}>
+                            <Button as="a" variant="primary" style={{alignItems:"center"}} >
                                 Login
                             </Button>
                         </div>
@@ -123,7 +123,7 @@ function Login() {
     )
 }
 
-export default Login
+export default React.memo(Login)
 
 
  {/* <li>
