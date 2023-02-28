@@ -38,18 +38,18 @@ function Agents() {
                       <img src={ele.bck_img}/>
                     </div>
                     <div className="other-details">
-                      <span>{ele.location}</span>
-                      <span>{ele.EST_MORTAGE}</span>
+                      <a href={`See_details/${ele.id}`}>{ele.location}</a>
+                      <a>{ele.EST_MORTAGE}</a>
                     </div>
                   </div>
                 ))
             }
 
           </div>
-          <div>
-            <h1>Popular By Categories</h1>
+            {/* <div>
+              <h2>Popular By Categories</h2>
 
-          </div>
+            </div> */}
 
         </div>
 

@@ -6,7 +6,7 @@ export const L_r_button=({data,Where_to,is_blank})=>{
 return (
  <li className="button">
 
-<Button  variant='primary' className="button-left" onClick={()=>window.open(Where_to,"_blank")} >{data}</Button>
+<Button  variant='primary' className="button-left" onClick={()=>window.open(Where_to)} >{data}</Button>
  </li>
 
 )

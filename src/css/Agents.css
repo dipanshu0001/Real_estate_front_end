@@ -40,7 +40,7 @@
        padding: 20px 30px;
 }
 .agents-outer .main .recent-list{
-    width:30%;
+    width:28%;
     
 }
 .agents-outer .main .recent-list .main{
@@ -52,15 +52,19 @@
 .agents-outer .main .recent-list .main .detail-div
 {
     display:flex;
-    margin:20px 10px;
+    padding:10px;
+    /* margin:10px; */
+    /* background-color: red; */
+
     justify-content: space-between;
     align-items: center;
 }
 
 .agents-outer .main .recent-list .main .detail-div .img{
-    width:40%;
+    width:48%;
     /* padding:10px; */
     height:100px;
+    /* background-color:    red; */
     border-radius: 5px;
     /* height:max-content; */
     overflow:hidden;
@@ -80,13 +84,52 @@
 }
 .agents-outer .main .recent-list .main .detail-div .other-details{
     font-family: "Poppins",serif;
-
+width:50%;
     font-weight: 500;
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
     text-align: left;
 }
 .agents-outer .main .recent-list .main .detail-div .other-details>*{
     padding:20px;
+    font-weight:700;
+    text-transform:capitalize;
 }
 
+.agents-outer .main .recent-list .main .detail-div .other-details   :last-child {
+    color:gray;
+}
+@media only screen and (max-width:950px){
+    .agents-outer .main{
+        width:90%;
+        flex-direction: column;
+        justify-content:center;
+    }
+    .agents-outer .main .profile-div,.agents-outer .main .recent-list{
+        width:100%;
+    }
+    .agents-outer .main .recent-list .main{
+        width:90%;
+        margin:auto;
+    }
+    .img-outer .content{
+        scale:1;
+    }
+}
+@media only screen and (max-width:707px){
+    .agents-outer .main{
+        width:100%
+    }
+    .agents-outer .main .profile-div{
+
+
+        grid-template-columns: 1fr;
+    }
+
+    .agents-outer .main .recent-list .main{
+        width:90%;
+        margin:auto;
+    }
+    
+}
