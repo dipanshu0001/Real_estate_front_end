@@ -10,7 +10,7 @@ function CategoriesTemp({ data: { img, type, listing,id } }) {
                     <img src={img} className="cat-img" />
 
                 {/* </div> */}
-                <div class="cat-detail">
+                <div className="cat-detail">
                     <p className="small-heading">{type}</p>
                     <p className="grey-text">{listing} Listing</p>
                 </div>

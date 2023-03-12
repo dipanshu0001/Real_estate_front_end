@@ -3,7 +3,7 @@ import { Feedback_data } from '../databse/Feedback_data'
 import Feedback from './Feedback'
 import "../css/All_feedback.css"
 import { BiLike } from 'react-icons/bi'
-import { L_r_button } from './Buttons'
+import  L_r_button  from './Buttons'
 function All_feedback() {
   // const[isliked,setLiked]=React.useState(0)
   return (

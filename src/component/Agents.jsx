@@ -1,4 +1,4 @@
-import React from 'react'
+import react from 'react'
 import { navbarImage } from '../databse/nav-bar-database'
 import Agentprofile from './Agentprofile'
 import Behindnavbar from './Behindnavbar'
@@ -6,6 +6,8 @@ import '../css/Agents.css'
 import backgroundImage from '../images/agent-bg.jpg'
 
 function Agents() {
+  
+  
   return (
     <div className="agents-outer">
       <div className='img-outer'>
@@ -24,7 +26,7 @@ function Agents() {
       <div className='main'>
         <div className='profile-div'>
           {
-            navbarImage.map((ele, index) => (<Agentprofile {...ele} />))
+            navbarImage.map((ele, index) => (<Agentprofile {...ele} key={index}/>))
           }
         </div>
         <div className="recent-list">

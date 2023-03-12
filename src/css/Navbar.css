@@ -1,8 +1,15 @@
-a{
+*{
     margin:0px;
     padding:0px;
 }
-
+span{
+    padding:0px;
+    margin:0px;
+}
+.navbar-main a{
+    color:white;
+    text-decoration:none;
+}
 .navbar-main{
     display:flex;
     flex-direction: column;
@@ -76,9 +83,17 @@ a{
 {
     display: flex;
     /* flex:30%; */
-    width:30%;
-    justify-content: space-around;
-    margin:auto 0px;
+    width:18%;
+    justify-content: space-between;
+    margin:auto 20px;
+}
+.login-img{
+    width: 20%;
+    height:100%;
+}
+.logout-btn{
+width: 20%;
+align-tracks: center    ;
 }
 .bottom-navbar{
     height:60%;
@@ -182,6 +197,6 @@ a{
         flex:.4 1 auto;
     }
     .login-signup{
-        flex:.4 1 auto;
+        flex:.6 1 auto;
     }
   }

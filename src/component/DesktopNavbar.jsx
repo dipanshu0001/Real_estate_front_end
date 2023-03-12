@@ -9,7 +9,7 @@ import { BsCalendar3 } from "react-icons/bs";
 // import Mobilenavbar from './Mobilenavbar'
 // import DesktopNavbar from './DesktopNavbar';
 import { AiOutlineStar, AiFillStar, AiOutlineShareAlt } from "react-icons/ai";
-import { L_r_button } from './Buttons';
+import  L_r_button  from './Buttons';
 
 function DesktopNavbar({data,details}) {
   const[isfav,setfav]=React.useState(data.fav);

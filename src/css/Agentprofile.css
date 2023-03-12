@@ -1,6 +1,7 @@
 .agent-outer{
     width:80%;
-    height:inherit;
+    /* height:fit-content; */
+    min-height: 0px ;
     margin:0px; 
 }
 .agent-inner{
@@ -17,6 +18,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
+    text-align: center;
 }
 .img_folder h5{
     text-align: center;

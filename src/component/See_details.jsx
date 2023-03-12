@@ -21,7 +21,7 @@ function See_details() {
     <div>
       {/* <Navbar/> */}
       {/* <Suspense fallback={<h4>Loading</h4>} */}
-      <Behindnavbar navbarImage={navbarImage} details="Printing Deatils" is_details={true}/>
+      <Behindnavbar navbarImage={navbarImage} details="Printing Deatils" is_details={true} id={id-1}/>
       <Suspense fallback={<h4>Loading ....</h4>}>
       <Property_details detail_data={navbarImage[id]}/>
       {/* <Property_details detail_data={navbarImage[id-1]}/> */}

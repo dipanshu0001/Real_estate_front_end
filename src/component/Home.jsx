@@ -24,7 +24,7 @@ function Home() {
   return (
     <>
       <Suspense fallback={<Loading/>}>
-        <Behindnavbar navbarImage={navbarImage} details="See details" is_details={false} />
+        <Behindnavbar navbarImage={navbarImage} details="See details" is_details={false} id={0}/>
         <Categories />
         <Recentlisting />
         <Toplisting />

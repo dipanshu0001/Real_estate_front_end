@@ -8,31 +8,39 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/Navbar.css'
 import '../css/Aside.css'
 import img from '../images/logo.png'
-import { L_r_button } from './Buttons';
-import CloseButton from 'react-bootstrap/CloseButton';
-
+import L_r_button from './Buttons';
 import { GoThreeBars } from "react-icons/go";
-import Aside from './Aside';
-// import {sidebar_isclicked} from './Home'
 import { Link, useNavigate } from "react-router-dom"
-import Form from './Form'
+import { Button } from 'react-bootstrap';
+import { useAuthData } from '../DataProvider/AccountProvider';
+import { auth } from '../Functions/FireBase-config'
+import { signOut } from 'firebase/auth'
+
 
 function Navbar({ islisting }) {
   const navigate = useNavigate();
   const [is_clicked, setClicked] = useState(true);
   const [isSticky, setSticky] = useState(false)
-  const [showmodal, setmodal] = useState(false)
-  // const [ishum, setHum] = useState(false)
-  // useEffect(() => {
-  // }, [is_clicked])
+  const { details, set_details } = useAuthData();
+  const handlelogout = () => {
+    auth.signOut().then(() => {
+      console.log('logged out successfully')
+      set_details({
+        accessToken: "",
+        displayName: "",
+        profileUrl: "",
+        email: "",
+        islogged_in: false,
+      });
+    }).catch(err => console.log(err.message))
+  }
+  
+
 
   function myFunction() {
     let nav_bar = document.getElementsByClassName("bottom-navbar")[0];
     let navbar_main = document.getElementsByClassName("navbar-main")[0];
     let upper_bar = document.getElementsByClassName("upper-navbar")[0];
-    // const height=100px;
-    // var sticky=nav_bar.offsetTop;
-    // console.log(window.scrollY)
 
     if (window.scrollY > 100) {
       nav_bar.classList.add("sticky")
@@ -54,8 +62,9 @@ function Navbar({ islisting }) {
   useEffect(() => {
     // if (isSticky === false)
     window.addEventListener('scroll', myFunction)
+    console.log(details)  
     // console.log("helo from navbar ")
-  }, [isSticky])
+  }, [isSticky,details])
   const changeHum = () => {
     // setHum(prev => !prev)
     // setClicked(ishum)
@@ -63,6 +72,7 @@ function Navbar({ islisting }) {
     setClicked(prev => !prev)
 
   }
+
 
   return (
     <div className={!islisting ? "navbar-main" : "navbar-main navbar_width"}>
@@ -74,12 +84,16 @@ function Navbar({ islisting }) {
           <a href="https://twitter.com/login?lang=en" target="_blank"><BsTwitter className="twitter" /></a>
         </div>
         <div className="login-signup">
-          
-            <span ><Link to='/Login'>   Login</Link></span>
-          
-          <span>or</span>
-          <span><Link to='/singup'>Singup</Link> </span>
+          {!details.isLoggedIn ?
+            (<>
+              <Link to='/Login'>Login   </Link>
+              <span>or</span>
+              <Link to='/singup'>Signup </Link>
+            </>) :
+            (<Button onClick={handlelogout}>Logout</Button>)
+          }
         </div>
+
 
 
       </div>

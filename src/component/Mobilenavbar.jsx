@@ -7,7 +7,7 @@ import { BiBed } from "react-icons/bi";
 import { BsCalendar3 } from "react-icons/bs";
 import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
 import { Media, MediaContextProvider } from '../media/breakpoint';
-import { L_r_button } from './Buttons';
+import  L_r_button  from './Buttons';
 import { AiOutlineStar, AiFillStar, AiOutlineShareAlt } from "react-icons/ai";
 
 function Mobilenavbar({ data,details }) {

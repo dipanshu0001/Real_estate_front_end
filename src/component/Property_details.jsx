@@ -4,7 +4,7 @@ import { BsThreeDotsVertical, BsTelephone, BsFillBookmarkFill, BsWindowSidebar }
 import { BiMessageAltDetail } from "react-icons/bi";
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import { data } from '../databse/agentdata'
-import { L_r_button } from './Buttons';
+import  L_r_button  from './Buttons';
 
 
 function Property_details({ detail_data }) {

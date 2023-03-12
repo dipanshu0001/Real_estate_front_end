@@ -3,7 +3,7 @@ import Feedback from './Feedback'
 import '../css/Testimonial.css'
 import Heading from '../common_components/Heading'
 import { Feedback_data } from '../databse/Feedback_data.js';
-import { L_r_button } from './Buttons';
+import  L_r_button  from './Buttons';
 function Testimonial() {
   return (
     <div className="Testi-main">

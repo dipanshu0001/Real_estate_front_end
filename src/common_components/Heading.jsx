@@ -10,4 +10,4 @@ function Heading({ small, large }) {
     )
 }
 
-export default Heading
+export default React.memo(Heading)

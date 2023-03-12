@@ -18,28 +18,25 @@ import '../css/Behindnavbar.css'
 
 
 
-function Behindnavbar({navbarImage,details,is_details}) {
- 
-  const [index, setindex] = useState(0);
+function Behindnavbar({navbarImage,details,is_details,id}) {
+  // console.log(id);
+//  const val=id!==undefined?id:0;
+  const [index, setindex] = useState(id);
   const data = navbarImage[index];
   const inc = () => {
     setindex((index + 1) % navbarImage.length)
-    // console.lof(index)
+    console.log(index)
   } 
   const dec = () => {
     if (index === 0) {
       setindex(navbarImage.length - 1)
-      console.log(index)
+      // console.log(index)
     }
     else
       setindex((index - 1))
     // console.lof(index)
   }
   useEffect(() => {
-    // console.log(index)
-    // console.log(navbarImage[index]) 
-    // data= navbarImage[index];
-
   }, [index])
   
   // console.log(data)

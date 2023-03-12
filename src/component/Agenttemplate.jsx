@@ -2,7 +2,7 @@ import React, { useState, useEffect,memo } from 'react'
 import '../css/Agenttemplate.css'
 import '../css/TopListingTemp.css'
 // import { data } from '../databse/agentdata'
-import { L_r_button } from './Buttons'
+import  L_r_button  from './Buttons'
 import { BsThreeDotsVertical, BsTelephone, BsFillBookmarkFill } from "react-icons/bs";
 import { BiMessageAltDetail } from "react-icons/bi";
 import { CiRuler } from "react-icons/ci";
