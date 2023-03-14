@@ -12,6 +12,7 @@ function AccountProvider({children}) {
     displayName:"",
     profileUrl:"",
     email:"",
+    uid:"",
     islogged_in:false,
   })
   const checkAuth=()=>{

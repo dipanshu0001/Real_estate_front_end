@@ -19,11 +19,12 @@ const googleauth = new GoogleAuthProvider();
 
 
 export const handlelogin_email = (email, password) => {
-    return signInWithEmailAndPassword(auth, email, password)
+    return new Promise((resolve, reject) => signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Handle successful sign-in
             const user = userCredential.user;
-            return { message: 'Signed in as ' + user.displayName, iserror: 1, data: user };
+            // return { message: 'Signed in as ' + user.displayName, iserror: 1, data: user };
+            resolve({ message: 'Signed in as ' + user.displayName, iserror: 1, ...user })
         })
         .catch((error) => {
             // Handle sign-in errors
@@ -49,8 +50,10 @@ export const handlelogin_email = (email, password) => {
             }
             let errmsg = new Error(message);
             errmsg.iserror = iserror
-            throw errmsg;
+            // throw errmsg;
+            reject(errmsg);
         })
+    )
 
 }
 export const handlelogin_google = () => {
@@ -66,7 +69,7 @@ export const handlelogin_google = () => {
                 const token = credential.accessToken;
                 // The signed-in user info.
                 const user = result.user;
-                resolve(user )
+                resolve(user)
             })
             .catch(error => {
                 const errorCode = error.code;

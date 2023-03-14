@@ -12,6 +12,7 @@ import { AiOutlineStar, AiFillStar, AiOutlineShareAlt } from "react-icons/ai";
 import  L_r_button  from './Buttons';
 
 function DesktopNavbar({data,details}) {
+  console.log(data.fav,data);  
   const[isfav,setfav]=React.useState(data.fav);
   return (
     <div>

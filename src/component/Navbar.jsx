@@ -62,13 +62,13 @@ function Navbar({ islisting }) {
   useEffect(() => {
     // if (isSticky === false)
     window.addEventListener('scroll', myFunction)
-    console.log(details)  
+    // console.log(details)  
     // console.log("helo from navbar ")
   }, [isSticky,details])
   const changeHum = () => {
     // setHum(prev => !prev)
     // setClicked(ishum)
-    console.log("helo");
+    // console.log("helo");
     setClicked(prev => !prev)
 
   }

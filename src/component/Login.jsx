@@ -1,15 +1,18 @@
 import React, { useState } from 'react'
 import '../css/Login.css'
-import { L_r_button } from './Buttons'
+// import { L_r_button } from './Buttons'
 import { SlSocialGoogle } from "react-icons/sl";
 import { FiFacebook } from "react-icons/fi"
 import { useNavigate } from 'react-router-dom';
 import { MdEmail } from "react-icons/md";
 import Button from 'react-bootstrap/Button';
-import { setSelectionRange } from '@testing-library/user-event/dist/utils';
-import { AiOutlineUser, AiFillLock, AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+// import { setSelectionRange } from '@testing-library/user-event/dist/utils';
+import {AiFillLock, AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useAuthData } from '../DataProvider/AccountProvider';
+import { addDoc, getDoc,doc } from "firebase/firestore"
+import { userRef } from '../firebase_database/model_ref';
+
 
 
 
@@ -25,6 +28,22 @@ function Login() {
         password: ""
     })
     const [isopen, setopen] = useState(false);
+    const add_data = async (result) => {
+        console.log(result); 
+        try {
+            const isdata_present = await getDoc(doc(userRef, result.uid));
+            if (!isdata_present.exists()) {
+                const response = await addDoc(userRef,
+                    {
+                        displayName: result.displayName || '',
+                        profileUrl: result.photoURL || '',
+                        email: result.email,
+                        uid: result.uid || '',
+                    })
+                // console.log(response.id)
+            }
+        } catch (e) { console.error(e) }
+    }
     const toggleeye = () => {
         const password_type = document.getElementById('password');
         if (password_type.type == "password") {
@@ -37,13 +56,16 @@ function Login() {
         }
     }
     const handlegooglelogin = () => {
-        handlelogin_google().then(result=>{
-            set_details({accessToken: result.accessToken,
+        handlelogin_google().then(result => {
+            set_details({
+                accessToken: result.accessToken,
                 displayName: result.displayName || '',
                 profileUrl: result.photoURL || '',
                 email: result.email,
+                uid: result.uid,
                 isLoggedIn: true
             })
+            add_data(result);
             navigate('/')
         }).catch(err => set_err(err.message, err.iserror))
     }
@@ -53,27 +75,26 @@ function Login() {
             .then(result => {
                 set_err(result.message, result.iserror)
                 console.log(
-                    result.data.accessToken,
-                     result.data.displayName || '',
-                     result.data.photoURL || '',
-                     result.data.email,
-                     "email ka log "
+                    result,
+                    "email ka log "
                 )
                 set_form({ email: "", password: "" })
-                set_details(prev => ({...prev,
-                    accessToken: result.data.accessToken,
-                    displayName: result.data.displayName || '',
-                    profileUrl: result.data.photoURL || '',
-                    email: result.data.email,
+                set_details(prev => ({
+                    ...prev,
+                    accessToken: result.accessToken,
+                    displayName: result.displayName || '',
+                    profileUrl: result.photoURL || '',
+                    email: result.email,
+                    uid:result.uid,
                     isLoggedIn: true
                 }))
+                add_data(result);
                 navigate('/');
-                // console.log(details);
             })
             .catch(err => set_err(err.message, err.iserror));
     }
-    if(details.isLoggedIn){
-        return navigate('/');   
+    if (details.isLoggedIn) {
+        return navigate('/');
     }
     return (
         <div className='login-outer'>
@@ -168,11 +189,3 @@ function Login() {
 
 export default React.memo(Login)
 
-
-{/* <li>
-                                        <a href="https://twitter.com/login?lang=en" target="_blank">
-                                            <Button variant="primary">
-                                                <BsTwitter className="twitter" />
-                                            </Button>
-                                        </a>
-                                    </li> */}
